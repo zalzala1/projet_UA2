@@ -1,0 +1,75 @@
+html {
+    box-sizing: border-box;
+}
+*,*,::before,*::after
+{
+    box-sizing: inherit;
+}
+body
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+header,footer
+{
+    background-color: #333;
+    padding: 1rem;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 50px;
+}
+main
+{
+    flex: 1;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 25ren;
+}
+.Fermer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Fermer a {
+    text-decoration: none;
+}
+.Retour_Menu,
+.Soumettre {
+    flex: 1; /* Pour que chaque élément prenne autant d'espace que possible */
+    margin-right: 10px; /* Ajoutez une marge entre les éléments si nécessaire */
+}
+.itempanier
+{
+    display: flex;
+   gap: 1rem;
+}
+.itempanier img
+{
+    width: 10rem;
+}
+.conteneur
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   
+}
+#ListeItems
+{
+    display: flex;
+    flex-wrap: wrap;
+   gap: 1rem;
+   margin: 0;
+   padding: 0;
+}

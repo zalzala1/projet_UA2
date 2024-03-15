@@ -1,0 +1,166 @@
+/* Reset CSS */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Styles de Base */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #FAF9F6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header, footer {
+    background-color: #102A43;
+    color: #FEFCFB;
+    padding: 1rem;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+#header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-button {
+    background-color: #FFA07A;
+    color: #FEFCFB;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Élimine le soulignement par défaut des liens */
+    font-weight: bold; /* Rend le texte du bouton un peu plus gras */
+}
+
+.login-button:hover {
+    background-color: #FF7F50; /* Change la couleur de fond au survol pour un effet interactif */
+    transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+
+main {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles des Composants */
+span {
+    background-color: #3D5A80;
+    color: #FEFCFB;
+    padding: 5px 15px;
+    border-radius: 20px; 
+    cursor: pointer;
+    display: inline-block;
+}
+
+.container, .liste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item {
+    background-color: #E0FBFC;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: calc(50% - 10px);
+    margin: 5px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.item button {
+    background-color: #3D5A80;
+    color: #FEFCFB;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+footer {
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .item {
+        width: calc(100% - 10px);
+    }
+}
+
+/* Ajoutez d'autres règles de média pour une meilleure réactivité sur divers appareils */
+/* Ajustement pour les images dans les éléments .item */
+.liste .item img {
+    width: 80%; /* Ajustement pour uniformiser la taille */
+    height: 200px; /* Hauteur fixe pour assurer la forme carrée */
+    object-fit: cover; /* Assure que l'image couvre la zone dédiée sans perdre ses proportions */
+    margin: 0 auto; /* Centrer l'image dans son conteneur */
+    border-radius: 8px; /* Ajoute un bord arrondi à l'image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow pour un effet visuel amélioré */
+    display: block; /* Assure que l'image est bien alignée et centrée */
+}
+
+/* Ajustement pour les items pour mieux accompagner les images ajustées */
+.liste .item {
+    background-color: #fff; /* Couleur de fond claire pour mieux faire ressortir l'image */
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Box shadow plus prononcé pour le conteneur */
+    border-radius: 8px; /* Bordures arrondies pour le conteneur */
+    transition: transform 0.3s; /* Transition douce pour l'effet au survol */
+}
+
+.liste .item:hover {
+    transform: translateY(-5px); /* Légère élévation au survol pour un effet interactif */
+}
+
+/* Assurer que le texte et les boutons à l'intérieur des items sont bien présentés */
+.liste .item .nom, .liste .item .description, .liste .item .prix {
+    margin: 10px 0; /* Espacement vertical pour une meilleure lisibilité */
+}
+
+.liste .item button {
+    margin-top: 20px; /* Espacement supplémentaire avant le bouton */
+}
+
+/* Adapter la mise en page pour différentes tailles d'écran */
+@media (max-width: 768px) {
+    .liste .item img {
+        height: 150px; /* Ajustement de la hauteur des images pour les écrans plus petits */
+    }
+}
